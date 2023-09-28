@@ -100,6 +100,43 @@
       <option name="presentableId" value="Default" />
       <updated>1695802794367</updated>
     </task>
+    <task id="LOCAL-00001" summary="Create GameManager&#10;Init GameConsole">
+      <created>1695898748427</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695898748427</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Create GameManager&#10;Init GameConsole">
+      <created>1695898978215</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695898978215</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Create GameManager&#10;Init GameConsole">
+      <created>1695899063838</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695899063838</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create GameManager&#10;Init GameConsole" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create GameManager&#10;Init GameConsole" />
   </component>
 </project>
