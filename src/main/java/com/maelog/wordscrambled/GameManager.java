@@ -87,7 +87,7 @@ public class GameManager {
 
     public String GetTime(){
         long end = System.currentTimeMillis();
-        NumberFormat formatter = new DecimalFormat("#0.00000");
+        NumberFormat formatter = new DecimalFormat("#0.00");
         return formatter.format((end - startTime) / 1000d);
     }
 
@@ -98,7 +98,13 @@ public class GameManager {
             letters.add(letter);
         }
         if (letters.size() > 2) {
-            Collections.shuffle(letters.subList(1, letters.size() - 1));
+            List<Character> buffer = new ArrayList<>(letters);
+            while(true){
+                Collections.shuffle(letters);
+                if(!buffer.equals(letters)){
+                    break;
+                }
+            }
         }
         for (char letter : letters) {
             mixWord.append(letter);
