@@ -106,7 +106,6 @@ public class GameManager {
         return mixWord.toString();
     }
 
-
 }
 
 
