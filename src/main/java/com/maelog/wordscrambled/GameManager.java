@@ -86,9 +86,23 @@ public class GameManager {
     }
 
     public String GetTime(){
-        long end = System.currentTimeMillis();
-        NumberFormat formatter = new DecimalFormat("#0.00");
+       /* long end = System.currentTimeMillis();
+        NumberFormat formatter = new DecimalFormat("#0");
         return formatter.format((end - startTime) / 1000d);
+
+        */
+        long end = System.currentTimeMillis();
+        long elapsedTimeInSeconds = (end - startTime) / 1000; // Get elapsed time in seconds
+
+// Calculate minutes and seconds
+        long minutes = elapsedTimeInSeconds / 60;
+        long seconds = elapsedTimeInSeconds % 60;
+
+// Format the minutes and seconds as mm:ss
+        String formattedTime = String.format("%02d:%02d", minutes, seconds);
+
+        return formattedTime;
+
     }
 
     public String MixWord(String word){

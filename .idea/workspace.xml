@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c042f9b-114b-432d-b26e-edabdfa5898c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/maelog/wordscrambled/WordJavafx.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/maelog/wordscrambled/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maelog/wordscrambled/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/maelog/wordscrambled/WordSConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maelog/wordscrambled/WordSConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maelog/wordscrambled/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maelog/wordscrambled/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/maelog/wordscrambled/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/maelog/wordscrambled/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,13 +43,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_directory_selection": "C:/Users/MaeLog/IdeaProjects/MasterIA/WordScrambled/src/main/java/com/maelog/wordscrambled"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MaeLog\IdeaProjects\MasterIA\WordScrambled\src\main\java\com\maelog\wordscrambled" />
@@ -58,7 +61,7 @@
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.maelog.wordscrambled.HelloApplication" />
       <module name="WordScrambled" />
-      <option name="PROGRAM_PARAMETERS" value="0" />
+      <option name="PROGRAM_PARAMETERS" value="1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.maelog.wordscrambled.*" />
@@ -105,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695899063838</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="WordConsole with timer">
+      <created>1695905703942</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695905703942</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,6 +138,17 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <MESSAGE value="Create GameManager&#10;Init GameConsole" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create GameManager&#10;Init GameConsole" />
+    <MESSAGE value="WordConsole with timer" />
+    <option name="LAST_COMMIT_MESSAGE" value="WordConsole with timer" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,16 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.maelog.wordscrambled.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maelog.wordscrambled.WordJavafx">
+   <top>
+      <Label text="Word Scrambler" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Lobster Two" size="55.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="MenuGame" alignment="CENTER" disable="true" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="71.0">
+               <children>
+                  <Label fx:id="word" text="Label">
+                     <font>
+                        <Font name="Montserrat Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Message" />
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="452.0">
+                     <children>
+                        <TextField fx:id="FieldWord" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" />
+                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#TryWord" text="Guess the word !" textAlignment="CENTER" underline="true" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="61.0" />
+               </padding>
+            </VBox>
+            <HBox fx:id="MenuStart" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#StartGame" text="Easy" />
+                  <Button mnemonicParsing="false" onAction="#StartGame" text="Medium" />
+                  <Button mnemonicParsing="false" onAction="#StartGame" text="Hard" />
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </center>
+   <bottom>
+      <SplitPane fx:id="footerGame" disable="true" dividerPositions="0.7506684491978608" opacity="0.0" prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <items>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#RestartGame" text="Restart" />
+                  <Button mnemonicParsing="false" onAction="#QuitGame" text="Quit" />
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="timerLabel" text="00:00">
+                     <font>
+                        <Font name="Ubuntu Regular" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </bottom>
+</BorderPane>
