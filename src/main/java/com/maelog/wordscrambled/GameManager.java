@@ -3,18 +3,16 @@ package com.maelog.wordscrambled;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
 public class GameManager {
-    int minSizeWord;
-    int maxSizeWord;
-    long startTime;
-    public List<String> ScrambledWords;
+    public int minSizeWord;
+    public int maxSizeWord;
+    public long startTime;
+    public List<String> scrambledWords;
     public GameManager(int difficulty) {
         List<String> listWord;
         List<Integer> arrayNumber;
@@ -39,7 +37,7 @@ public class GameManager {
         }
         listWord = GetAllWords();
         arrayNumber = ArrayNumber(10, 1, listWord.size());
-        ScrambledWords = ScrambledWords(listWord, arrayNumber);
+        scrambledWords = ScrambledWords(listWord, arrayNumber);
     }
 
     public List<String> GetAllWords() {
@@ -86,22 +84,13 @@ public class GameManager {
     }
 
     public String GetTime(){
-       /* long end = System.currentTimeMillis();
-        NumberFormat formatter = new DecimalFormat("#0");
-        return formatter.format((end - startTime) / 1000d);
-
-        */
         long end = System.currentTimeMillis();
         long elapsedTimeInSeconds = (end - startTime) / 1000; // Get elapsed time in seconds
 
-// Calculate minutes and seconds
         long minutes = elapsedTimeInSeconds / 60;
         long seconds = elapsedTimeInSeconds % 60;
 
-// Format the minutes and seconds as mm:ss
-        String formattedTime = String.format("%02d:%02d", minutes, seconds);
-
-        return formattedTime;
+        return String.format("%02d:%02d", minutes, seconds);
 
     }
 

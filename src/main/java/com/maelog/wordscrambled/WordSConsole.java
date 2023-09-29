@@ -1,6 +1,5 @@
 package com.maelog.wordscrambled;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class WordSConsole {
@@ -40,7 +39,8 @@ public class WordSConsole {
     public void Game(){
         game.InitTimer();
         compteur = 1;
-        for (String word: game.ScrambledWords) {
+        System.out.println(game.scrambledWords);
+        for (String word: game.scrambledWords) {
             String bufferWord = word;
             word = game.MixWord(word);
             System.out.println("Your word is : "+ word + "\n --------------------------- \n");
@@ -49,7 +49,7 @@ public class WordSConsole {
                 compteur++;
             }
         }
-        System.out.println("Bravo tu as trouvé cette liste de mot en " + game.GetTime() + " second");
+        System.out.println("Bravo tu as trouvé cette liste de mot en " + game.GetTime() + " minutes");
     }
 
 

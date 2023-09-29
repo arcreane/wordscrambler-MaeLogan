@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.MaeLog</groupId>
-    <artifactId>WordScrambled</artifactId>
+    <artifactId>WordScrambler</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>WordScrambled</name>
 

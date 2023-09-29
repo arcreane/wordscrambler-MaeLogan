@@ -5,34 +5,26 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.animation.RotateTransition;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 public class WordJavafx {
 
-    GameManager game;
-    Integer compteur;
-    public HBox MenuStart;
-    public VBox MenuGame;
+    private GameManager game;
+    private Integer compteur;
+    private Timeline timeline;
+    public HBox menuStart;
+    public VBox menuGame;
     public Label word;
-    public Label Message;
-    public TextField FieldWord;
+    public Label message;
+    public TextField fieldWord;
     public String wordToFind;
     public Label timerLabel;
     public SplitPane footerGame;
-    public Timeline timeline;
+    public Button buttonSend;
 
 
 
@@ -52,66 +44,69 @@ public class WordJavafx {
             default -> System.out.println("error not a button");
         }
         ChangeLayout();
-        System.out.println(game.ScrambledWords);
+        buttonSend.setDisable(false);
+        System.out.println(game.scrambledWords);
         NextWord();
         game.InitTimer();
-        setTimer();
+        SetTimer();
     }
 
     public void ChangeLayout(){
-        if(MenuStart.isDisable() && !MenuGame.isDisable()){
-            MenuStart.setDisable(false);
-            MenuStart.setOpacity(1);
-            MenuGame.setDisable(true);
-            MenuGame.setOpacity(0);
+        if(menuStart.isDisable() && !menuGame.isDisable()){
+            menuStart.setDisable(false);
+            menuStart.setOpacity(1);
+            menuGame.setDisable(true);
+            menuGame.setOpacity(0);
             footerGame.setDisable(true);
             footerGame.setOpacity(0);
 
         }
         else{
-            MenuGame.setDisable(false);
-            MenuGame.setOpacity(1);
-            MenuStart.setDisable(true);
-            MenuStart.setOpacity(0);
+            menuGame.setDisable(false);
+            menuGame.setOpacity(1);
+            menuStart.setDisable(true);
+            menuStart.setOpacity(0);
             footerGame.setDisable(false);
             footerGame.setOpacity(1);
         }
     }
 
     public void TryWord(){
-        String word = FieldWord.getText();
-        System.out.println(word);
-        Message.setText("");
-
+        String word = fieldWord.getText();
+        message.setText("");
         if(word.equalsIgnoreCase(wordToFind)) {
             NextWord();
-            FieldWord.setText("");
+            fieldWord.setText("");
         }
         else{
-            Message.setTextFill(Color.color(1,0,0));
-            Message.setText("Not the good word !");
+            message.setTextFill(Color.color(1,0,0));
+            message.setText("Not the good word !");
 
         }
 
     }
 
     public void NextWord(){
-        if(compteur +1 > game.ScrambledWords.size()){
+        if(compteur +1 > game.scrambledWords.size()){
             word.setTextFill(Color.color(0,1,0));
             word.setText("GOOD JOB you finish in "+ timerLabel.getText() + " minutes");
             StopTimer();
-            MenuGame.setDisable(true);
+            buttonSend.setDisable(true);
+
+            //MenuGame.setDisable(true);
+
+
             word.setDisable(true);
         }
         else {
-            String nextWord = game.ScrambledWords.get(compteur);
+            String nextWord = game.scrambledWords.get(compteur);
             word.setText(game.MixWord(nextWord));
             wordToFind = nextWord;
             compteur++;
         }
     }
 
-    public void setTimer(){
+    public void SetTimer(){
         timeline = new Timeline(new KeyFrame(Duration.seconds(1), ev -> {
             timerLabel.setText(game.GetTime());
         }));
@@ -127,7 +122,7 @@ public class WordJavafx {
         ChangeLayout();
         compteur = 0;
         word.setTextFill(Color.color(0,0,0));
-        Message.setText("");
+        message.setText("");
         StopTimer();
     }
 

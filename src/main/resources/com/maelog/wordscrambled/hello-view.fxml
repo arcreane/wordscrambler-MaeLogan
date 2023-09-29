@@ -22,18 +22,18 @@
    <center>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox fx:id="MenuGame" alignment="CENTER" disable="true" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="71.0">
+            <VBox fx:id="menuGame" alignment="CENTER" disable="true" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="71.0">
                <children>
                   <Label fx:id="word" text="Label">
                      <font>
                         <Font name="Montserrat Regular" size="24.0" />
                      </font>
                   </Label>
-                  <Label fx:id="Message" />
-                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="452.0">
+                  <Label fx:id="message" />
+                  <HBox fx:id="FieldRespond" alignment="CENTER" prefHeight="30.0" prefWidth="452.0">
                      <children>
-                        <TextField fx:id="FieldWord" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" />
-                        <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#TryWord" text="Guess the word !" textAlignment="CENTER" underline="true" />
+                        <TextField fx:id="fieldWord" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" />
+                        <Button fx:id="buttonSend" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#TryWord" text="Guess the word !" textAlignment="CENTER" underline="true" />
                      </children>
                   </HBox>
                </children>
@@ -41,7 +41,7 @@
                   <Insets bottom="61.0" />
                </padding>
             </VBox>
-            <HBox fx:id="MenuStart" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+            <HBox fx:id="menuStart" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#StartGame" text="Easy" />
                   <Button mnemonicParsing="false" onAction="#StartGame" text="Medium" />
